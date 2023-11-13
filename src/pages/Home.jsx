@@ -68,36 +68,36 @@ export const Home = () => {
                 ))}
             </List>
             <chakra.form
-onSubmit={(e) => {
-    e.preventDefault() // Без перезагрузки приложения после добавления задачи
-    createTodoHandler(text)
-}}
-display="flex"
-flexDirection="column"
-alignItems="center"
-gap="20px"
->
-<Input
-    placeholder="Напишите задачу..."
-    maxLength={80}
-    value={text}
-    onChange={(e) => setText(e.target.value)}
-    w="300px"
-    h="32px"
-/>
-<Button
-    isDisabled={!text.trim().length}
-    type="submit"
-    w="fit-content"
-    background="blue.500"
-    color="white"
-    _hover={{
-        background: 'blue.600',
-    }}
->
-    Добавить задачу
-</Button>
-</chakra.form>
-</Flex>
-)
+                onSubmit={(e) => {
+                    e.preventDefault() // Без перезагрузки приложения после добавления задачи
+                    createTodoHandler(text)
+                }}
+                display="flex"
+                flexDirection="column"
+                alignItems="center"
+                gap="20px"
+                >
+                <Input
+                    placeholder="Напишите задачу..."
+                    maxLength={80}
+                    value={text}
+                    onChange={(e) => setText(e.target.value)}
+                    w="300px"
+                    h="32px"
+                />
+                <Button
+                    isDisabled={!text.trim().length}
+                    type="submit"
+                    w="fit-content"
+                    background="blue.500"
+                    color="white"
+                    _hover={{
+                        background: 'blue.600',
+                    }}
+                >
+                    Добавить задачу
+                </Button>
+            </chakra.form>
+        </Flex>
+    )
 }
